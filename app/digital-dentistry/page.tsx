@@ -31,6 +31,21 @@ export default function DigitalDentistryPage() {
         </div>
       </section>
 
+      <section className="bg-[#F8FAFC] px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1440px]">
+          <p className="eyebrow justify-center">Digital Workflow Services</p>
+          <h2 className="display-font mt-4 text-center text-4xl font-bold text-[#09233f] md:text-5xl">End-to-end digital support for modern practices.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center leading-8 text-slate-600">From scanning to final delivery, our digital workflow services help you transition smoothly into modern digital dentistry.</p>
+          <div className="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><span className="font-bold text-[#09233f]">✓</span> <span className="font-semibold text-[#09233f]">Intraoral scanning</span></div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><span className="font-bold text-[#09233f]">✓</span> <span className="font-semibold text-[#09233f]">CAD/CAM design</span></div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><span className="font-bold text-[#09233f]">✓</span> <span className="font-semibold text-[#09233f]">STL workflow support</span></div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><span className="font-bold text-[#09233f]">✓</span> <span className="font-semibold text-[#09233f]">Remote collaboration</span></div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><span className="font-bold text-[#09233f]">✓</span> <span className="font-semibold text-[#09233f]">Digital case planning</span></div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-50 px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-5xl text-center">
           <p className="eyebrow justify-center">Next Step</p>

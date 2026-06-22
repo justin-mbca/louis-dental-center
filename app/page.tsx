@@ -93,7 +93,7 @@ export default function Home() {
             </p>
             <p className="mt-5 text-xl font-bold text-[#1E3A5F]">We believe every dentist deserves options.</p>
             <p className="mt-4 max-w-3xl leading-8 text-[#334155]">
-              Whether you prioritize premium U.S.-made restorations, cost-effective global manufacturing, remote CAD/CAM design services, or complex implant and full-arch solutions, our team works with you to find the right balance of quality, turnaround time, and budget.
+              Whether you prioritize premium U.S.-made restorations, affordable global manufacturing, remote CAD/CAM design services, or complex implant and full-arch solutions, our team works with you to find the right balance of quality, turnaround time, and budget.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {[
@@ -128,8 +128,8 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
           <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-xl sm:min-h-[560px]">
             <Image
-              src="/images/dental-lab-team.png"
-              alt="Dental laboratory team collaborating on a digital restoration"
+              src="/images/intraoral-scanning.png"
+              alt="Intraoral scanner capturing accurate digital impressions"
               fill
               sizes="(min-width: 1024px) 52vw, 100vw"
               className="object-cover"
@@ -221,6 +221,41 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F8FAFC] px-5 py-20 sm:px-8 lg:px-12" id="digital-practice">
+        <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Digital Practice Support</p>
+            <h2 className="display-font mt-4 text-4xl font-bold text-[#1E3A5F] md:text-5xl">Intraoral scanners for modern dental practices.</h2>
+            <p className="mt-5 leading-8 text-slate-600">
+              We provide intraoral scanners to qualified dental practices to help doctors transition to efficient digital workflows.
+            </p>
+            <div className="mt-8 grid gap-4">
+              {[
+                ["Improved Efficiency", "Digital impressions reduce chair time and eliminate physical impression material."],
+                ["Faster Turnaround", "STL files are sent instantly for design review and case production."],
+                ["Digital Case Submission", "Seamless scanner-to-lab communication for predictable results."],
+                ["Better Patient Experience", "Comfortable, quick intraoral scanning instead of traditional impressions."],
+              ].map(([title, text]) => (
+                <div key={title} className="rounded-2xl border border-[#D9BC7B]/30 bg-white p-5 shadow-sm">
+                  <h3 className="font-bold text-[#1E3A5F]">{title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-xl sm:min-h-[560px]">
+            <Image
+              src="/images/intraoral-scanning.png"
+              alt="Intraoral scanner in use at a dental practice"
+              fill
+              sizes="(min-width: 1024px) 55vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#06182b]/10 to-transparent" />
           </div>
         </div>
       </section>

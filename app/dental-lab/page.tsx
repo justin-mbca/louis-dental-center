@@ -33,6 +33,64 @@ export default function DentalLabPage() {
         </div>
       </section>
 
+      <section className="bg-[#F8FAFC] px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1440px]">
+          <p className="eyebrow justify-center">Remote CAD/CAM Design Services</p>
+          <h2 className="display-font mt-4 text-center text-4xl font-bold text-[#09233f] md:text-5xl">Fast, collaborative design support for your lab.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center leading-8 text-slate-600">Remote design services tailored to your workflow, with rapid communication and predictable turnaround.</p>
+          <div className="mx-auto mt-10 grid gap-6 md:grid-cols-2">
+            <div className="premium-card rounded-3xl p-8 text-center">
+              <div className="inline-flex rounded-full bg-[#fbf7ee] px-4 py-1 text-sm font-bold text-[#B58A3C]">Rapid Response</div>
+              <h3 className="mt-6 text-2xl font-bold text-[#09233f]">1-Hour Rapid Response Service</h3>
+              <p className="mt-3 leading-7 text-slate-600">Immediate design communication and technical consultation with fast design review for urgent cases.</p>
+              <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-slate-600">
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Immediate design communication</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Technical consultation</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Fast design review</li>
+              </ul>
+            </div>
+            <div className="premium-card rounded-3xl p-8 text-center">
+              <div className="inline-flex rounded-full bg-[#fbf7ee] px-4 py-1 text-sm font-bold text-[#B58A3C]">Standard</div>
+              <h3 className="mt-6 text-2xl font-bold text-[#09233f]">24-Hour Design Turnaround</h3>
+              <p className="mt-3 leading-7 text-slate-600">Completed design delivery with full digital workflow support and laboratory collaboration.</p>
+              <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-slate-600">
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Completed design delivery</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Digital workflow support</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Laboratory collaboration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1440px]">
+          <p className="eyebrow justify-center">Removables</p>
+          <h2 className="display-font mt-4 text-center text-4xl font-bold text-[#09233f] md:text-5xl">Removable Denture Solutions</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center leading-8 text-slate-600">Digital and traditional denture options to match your practice workflow and patient needs.</p>
+          <div className="mx-auto mt-10 grid gap-6 md:grid-cols-2">
+            <div className="premium-card rounded-3xl p-8 text-center">
+              <div className="icon-box mx-auto text-xl">✧</div>
+              <h3 className="mt-6 text-2xl font-bold text-[#09233f]">3D Printed Dentures</h3>
+              <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-slate-600">
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Digital workflow</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Rapid production</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Consistent results</li>
+              </ul>
+            </div>
+            <div className="premium-card rounded-3xl p-8 text-center">
+              <div className="icon-box mx-auto text-xl">✦</div>
+              <h3 className="mt-6 text-2xl font-bold text-[#09233f]">Traditional Acrylic Dentures</h3>
+              <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-slate-600">
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Conventional workflow</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Time-tested materials</li>
+                <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Personalized customization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#f6f1e8] px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="eyebrow justify-center">Case Collaboration</p>
