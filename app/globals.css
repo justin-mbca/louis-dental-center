@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #09233f;
-  --navy-deep: #06182b;
+  --navy: #1e3a5f;
+  --navy-deep: #1e3a5f;
   --gold: #b58a3c;
   --gold-light: #d9bc7b;
-  --ink: #15283d;
+  --ink: #334155;
   --muted: #64748b;
   --line: #e2e8f0;
-  --background: #ffffff;
+  --background: #f8fafc;
+  --accent-light: #eaf4ff;
 }
 
 * {
@@ -55,7 +56,7 @@ a {
 
 ::selection {
   background: #d9bc7b;
-  color: #06182b;
+  color: #1e3a5f;
 }
 
 .display-font {
@@ -95,14 +96,14 @@ a {
 }
 
 .button-primary {
-  background: var(--gold);
-  color: #07182a;
-  box-shadow: 0 10px 25px rgb(181 138 60 / 22%);
+  background: var(--navy);
+  color: white;
+  box-shadow: 0 10px 25px rgb(30 58 95 / 22%);
 }
 
 .button-primary:hover {
-  background: #c99d4d;
-  box-shadow: 0 14px 32px rgb(181 138 60 / 30%);
+  background: #294d78;
+  box-shadow: 0 14px 32px rgb(30 58 95 / 30%);
   transform: translateY(-2px);
 }
 
@@ -163,15 +164,15 @@ a {
 }
 
 .premium-card {
-  border: 1px solid #e7ebf0;
+  border: 1px solid #dce6f0;
   background: white;
-  box-shadow: 0 16px 45px rgb(15 35 58 / 7%);
+  box-shadow: 0 16px 45px rgb(30 58 95 / 7%);
   transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
 }
 
 .premium-card:hover {
-  border-color: rgb(181 138 60 / 45%);
-  box-shadow: 0 24px 60px rgb(15 35 58 / 13%);
+  border-color: rgb(217 188 123 / 70%);
+  box-shadow: 0 24px 60px rgb(30 58 95 / 13%);
   transform: translateY(-6px);
 }
 
@@ -182,8 +183,8 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  background: #f4efe6;
-  color: #9b732e;
+  background: #eaf4ff;
+  color: #1e3a5f;
 }
 
 .section-shell {

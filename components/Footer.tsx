@@ -20,7 +20,7 @@ const portalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#06182b] text-white">
+    <footer className="relative overflow-hidden bg-[#1E3A5F] text-white">
       <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#b78b3e]/10 blur-3xl" />
       <div className="relative mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.25fr_.75fr_.75fr_1fr]">

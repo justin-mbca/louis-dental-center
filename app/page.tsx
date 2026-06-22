@@ -72,7 +72,7 @@ function SectionHeader({ eyebrow, title, text }: { eyebrow: string; title: strin
   return (
     <div className="mx-auto max-w-3xl text-center">
       <p className="eyebrow justify-center">{eyebrow}</p>
-      <h2 className="display-font mt-4 text-4xl font-bold tracking-tight text-[#09233f] md:text-5xl">{title}</h2>
+      <h2 className="display-font mt-4 text-4xl font-bold tracking-tight text-[#1E3A5F] md:text-5xl">{title}</h2>
       <p className="mt-5 text-base leading-8 text-slate-600">{text}</p>
     </div>
   );
@@ -81,34 +81,50 @@ function SectionHeader({ eyebrow, title, text }: { eyebrow: string; title: strin
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <section className="relative min-h-[720px] bg-[#071b30] text-white lg:min-h-[calc(100vh-78px)]">
-        <Image src="/images/hero-dental-lab.png" alt="Modern digital dental laboratory workflow" fill priority sizes="100vw" className="object-cover object-[68%_center]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,19,34,.98)_0%,rgba(5,19,34,.9)_38%,rgba(5,19,34,.42)_70%,rgba(5,19,34,.16)_100%)]" />
-        <div className="section-shell relative flex min-h-[720px] items-center py-20 lg:min-h-[calc(100vh-78px)]">
-          <div className="max-w-3xl">
-            <p className="eyebrow text-[#d7b66e]">Louis Dental Center</p>
-            <h1 className="display-font mt-6 text-5xl leading-[1.03] sm:text-6xl lg:text-[80px]">
-              Modern dentistry.
-              <span className="block text-[#d6b36a]">Digital dental lab.</span>
-              CAD/CAM precision.
+      <section className="bg-[#F8FAFC]">
+        <div className="section-shell grid min-h-[720px] items-center gap-12 py-16 lg:grid-cols-[1.08fr_.92fr] lg:py-24">
+          <div className="max-w-4xl">
+            <p className="eyebrow">Louis Dental Center</p>
+            <h1 className="display-font mt-5 text-5xl font-bold leading-[1.04] text-[#1E3A5F] sm:text-6xl lg:text-[72px]">
+              Your Comprehensive Dental Solution Center
             </h1>
-            <p className="mt-7 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
-              Louis Dental Center combines clinical dentistry, certified dental technology expertise, and advanced digital laboratory workflows for crowns, bridges, implants, full-arch restorations, and remote CAD/CAM design support.
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-[#334155]">
+              Louis Dental Center combines local support, digital dentistry, domestic manufacturing, and global production resources to provide flexible solutions for modern dental practices.
+            </p>
+            <p className="mt-5 text-xl font-bold text-[#1E3A5F]">We believe every dentist deserves options.</p>
+            <p className="mt-4 max-w-3xl leading-8 text-[#334155]">
+              Whether you prioritize premium U.S.-made restorations, cost-effective global manufacturing, remote CAD/CAM design services, or complex implant and full-arch solutions, our team works with you to find the right balance of quality, turnaround time, and budget.
+            </p>
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              {[
+                "Premium U.S.-Made Restorations",
+                "Affordable Global Manufacturing",
+                "Remote CAD/CAM Design",
+                "Implant & Full-Arch Solutions",
+                "Personalized Technical Support",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3 rounded-2xl border border-[#D9BC7B]/50 bg-white px-4 py-3 font-semibold text-[#334155] shadow-sm">
+                  <span className="text-[#B58A3C]">✓</span>
+                  {item}
+                </div>
+              ))}
+            </div>
+            <p className="mt-7 text-xl font-bold italic text-[#1E3A5F]">
+              Different Solutions. Different Prices. One Service Standard.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/case-upload" className="button-primary">Upload a Case</Link>
-              <Link href="/services" className="button-light">Explore Services</Link>
+              <Link href="/services" className="button-secondary">Explore Services</Link>
             </div>
-            <div className="mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">
-              {["20+ years lab expertise", "Exocad / 3Shape / Sirona", "Dentists, labs & milling centers"].map((item) => (
-                <div key={item} className="rounded-2xl border border-white/15 bg-white/10 p-4 text-sm font-semibold text-slate-100 backdrop-blur">{item}</div>
-              ))}
-            </div>
+          </div>
+          <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] shadow-2xl sm:min-h-[560px]">
+            <Image src="/images/hero-dental-lab.png" alt="Modern digital dental laboratory workflow" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/30" />
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20 sm:px-8 lg:px-12" id="about">
+      <section className="bg-[#EAF4FF] px-5 py-20 sm:px-8 lg:px-12" id="about">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
           <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-xl sm:min-h-[560px]">
             <Image
@@ -121,9 +137,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#06182b]/25 to-transparent" />
           </div>
           <div>
-            <div className="rounded-[2rem] bg-[#f6f1e8] p-8 shadow-sm">
+            <div className="rounded-[2rem] bg-white p-8 shadow-sm">
               <p className="eyebrow">About</p>
-              <h2 className="display-font mt-4 text-4xl font-bold text-[#09233f]">A dental center built around digital precision.</h2>
+              <h2 className="display-font mt-4 text-4xl font-bold text-[#1E3A5F]">A dental center built around digital precision.</h2>
               <p className="mt-5 leading-8 text-slate-700">
                 Louis Dental Center provides modern dental care and digital laboratory services with a strong focus on CAD/CAM design, restorative workflows, implant planning, and dependable communication between clinical and laboratory teams.
               </p>
@@ -136,7 +152,7 @@ export default function Home() {
                 ["For Patients", "Modern restorative dentistry supported by digital planning and careful craftsmanship."],
               ].map(([title, text]) => (
                 <div key={title} className="premium-card rounded-3xl p-6">
-                  <h3 className="text-xl font-bold text-[#09233f]">{title}</h3>
+                  <h3 className="text-xl font-bold text-[#1E3A5F]">{title}</h3>
                   <p className="mt-3 leading-7 text-slate-600">{text}</p>
                 </div>
               ))}
@@ -145,7 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-5 py-20 sm:px-8 lg:px-12" id="services">
+      <section className="bg-[#F8FAFC] px-5 py-20 sm:px-8 lg:px-12" id="services">
         <SectionHeader eyebrow="Services" title="Restorative, implant, and digital lab support" text="From single-unit restorations to full-arch workflows, our services are designed to help dental professionals improve efficiency, quality, and case communication." />
         <div className="mx-auto mt-12 grid max-w-[1440px] gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
@@ -165,7 +181,7 @@ export default function Home() {
               </div>
               <div className="p-7">
                 <div className="icon-box text-xl">✦</div>
-                <h3 className="mt-5 text-2xl font-bold text-[#09233f]">{service.title}</h3>
+                <h3 className="mt-5 text-2xl font-bold text-[#1E3A5F]">{service.title}</h3>
                 <p className="mt-3 leading-7 text-slate-600">{service.text}</p>
               </div>
             </Link>
@@ -173,11 +189,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20 sm:px-8 lg:px-12" id="digital-dentistry">
+      <section className="bg-[#EAF4FF] px-5 py-20 sm:px-8 lg:px-12" id="digital-dentistry">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="eyebrow">Digital Dentistry</p>
-            <h2 className="display-font mt-4 text-4xl font-bold text-[#09233f] md:text-5xl">A connected workflow from scan to restoration.</h2>
+            <h2 className="display-font mt-4 text-4xl font-bold text-[#1E3A5F] md:text-5xl">A connected workflow from scan to restoration.</h2>
             <p className="mt-5 leading-8 text-slate-600">
               We support STL-based digital case intake, CAD/CAM design, and file communication for Exocad, 3Shape, Sirona, and common scanner workflows. The goal is simple: reduce friction, clarify expectations, and help every case move forward with confidence.
             </p>
@@ -194,14 +210,14 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="rounded-[2rem] bg-[#071b30] p-8 text-white shadow-2xl">
-            <h3 className="text-2xl font-bold">Digital case workflow</h3>
+          <div className="rounded-[2rem] border border-blue-100 bg-white p-8 shadow-xl">
+            <h3 className="text-2xl font-bold text-[#1E3A5F]">Digital case workflow</h3>
             <div className="mt-7 grid gap-4">
               {steps.map(([number, title, text]) => (
-                <div key={title} className="rounded-2xl border border-white/10 bg-white/10 p-5">
-                  <p className="text-sm font-bold text-[#d9bc7b]">{number}</p>
-                  <h4 className="mt-1 text-lg font-bold">{title}</h4>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">{text}</p>
+                <div key={title} className="rounded-2xl border border-blue-100 bg-[#F8FAFC] p-5">
+                  <p className="text-sm font-bold text-[#B58A3C]">{number}</p>
+                  <h4 className="mt-1 text-lg font-bold text-[#1E3A5F]">{title}</h4>
+                  <p className="mt-2 text-sm leading-6 text-[#334155]">{text}</p>
                 </div>
               ))}
             </div>
@@ -209,21 +225,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#06182b] px-5 py-20 text-white sm:px-8 lg:px-12" id="ai">
+      <section className="bg-[#F8FAFC] px-5 py-20 sm:px-8 lg:px-12" id="ai">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
           <div>
-            <p className="eyebrow text-[#d9bc7b]">AI-Enhanced Dentistry</p>
-            <h2 className="display-font mt-4 text-4xl font-bold md:text-5xl">Future-ready digital case management.</h2>
-            <p className="mt-5 leading-8 text-slate-300">
+            <p className="eyebrow">AI-Enhanced Dentistry</p>
+            <h2 className="display-font mt-4 text-4xl font-bold text-[#1E3A5F] md:text-5xl">Future-ready digital case management.</h2>
+            <p className="mt-5 leading-8 text-[#334155]">
               The new website includes frontend-ready concepts for AI-assisted case intake, restoration planning support, upload workflows, and case tracking. These are designed as conservative decision-support tools, not medical diagnosis tools.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/ai-dentistry" className="button-primary">View AI Features</Link>
-              <Link href="/dentist-portal" className="button-light">Open Dentist Portal</Link>
+              <Link href="/dentist-portal" className="button-secondary">Open Dentist Portal</Link>
             </div>
           </div>
           <div>
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] border border-blue-100 shadow-xl">
               <Image
                 src="/images/ai-dentistry.png"
                 alt="Digital case management interface supporting a restorative workflow"
@@ -231,25 +247,25 @@ export default function Home() {
                 sizes="(min-width: 1024px) 45vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#06182b]/30 to-transparent" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/30" />
             </div>
             <div className="mt-5 grid gap-4">
-              {aiFeatures.map((feature) => <div key={feature} className="rounded-2xl border border-white/10 bg-white/10 p-5 font-semibold text-slate-100">✓ {feature}</div>)}
+              {aiFeatures.map((feature) => <div key={feature} className="rounded-2xl border border-blue-100 bg-white p-5 font-semibold text-[#334155] shadow-sm">✓ {feature}</div>)}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20 sm:px-8 lg:px-12" id="faq">
+      <section className="bg-[#EAF4FF] px-5 py-20 sm:px-8 lg:px-12" id="faq">
         <SectionHeader eyebrow="FAQ" title="Common questions" text="A quick overview for dentists, labs, and partners evaluating Louis Dental Center for digital case support." />
         <div className="mx-auto mt-10 max-w-4xl space-y-4">
-          {faqs.map(([q, a]) => <div key={q} className="rounded-3xl border border-slate-200 p-6"><h3 className="text-lg font-bold text-[#09233f]">{q}</h3><p className="mt-2 leading-7 text-slate-600">{a}</p></div>)}
+          {faqs.map(([q, a]) => <div key={q} className="rounded-3xl border border-blue-100 bg-white p-6"><h3 className="text-lg font-bold text-[#1E3A5F]">{q}</h3><p className="mt-2 leading-7 text-slate-600">{a}</p></div>)}
         </div>
       </section>
 
-      <section className="bg-[#f6f1e8] px-5 py-20 text-center sm:px-8 lg:px-12" id="contact">
+      <section className="bg-[#F8FAFC] px-5 py-20 text-center sm:px-8 lg:px-12" id="contact">
         <p className="eyebrow justify-center">Get Started</p>
-        <h2 className="display-font mx-auto mt-4 max-w-4xl text-4xl font-bold text-[#09233f] md:text-5xl">Ready to submit a case or discuss a digital workflow?</h2>
+        <h2 className="display-font mx-auto mt-4 max-w-4xl text-4xl font-bold text-[#1E3A5F] md:text-5xl">Ready to submit a case or discuss a digital workflow?</h2>
         <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">Contact Louis Dental Center for CAD/CAM design, digital dental lab support, restorative dentistry, or partnership inquiries.</p>
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
           <Link href="/case-upload" className="button-primary">Upload Case</Link>
