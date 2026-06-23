@@ -44,48 +44,26 @@ export default function ServicesPage() {
       </section>
 
       <section className="bg-[#F8FAFC] px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1440px]">
+        <div className="mx-auto max-w-[1440px] text-center">
           <p className="eyebrow justify-center">Flexible Restoration Solutions</p>
-          <h2 className="display-font mt-4 text-center text-4xl font-bold text-[#09233f] md:text-5xl">Digital Workflow Zirconia — starting at $49</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-center leading-8 text-slate-600">Requires intraoral scanner data. No physical impressions. Fully digital workflow. Efficient and affordable quality zirconia restorations.</p>
-        </div>
-        <div className="mx-auto mt-10 grid max-w-[1440px] gap-6 md:grid-cols-3">
-          <div className="premium-card rounded-3xl p-8 text-center">
-            <div className="inline-flex rounded-full bg-[#fbf7ee] px-4 py-1 text-sm font-bold text-[#B58A3C]">Option 1</div>
-            <h3 className="mt-6 text-2xl font-bold text-[#09233f]">Digital Workflow Zirconia</h3>
-            <p className="mt-2 text-4xl font-bold text-[#09233f]">$49<span className="text-lg font-normal text-slate-500">+</span></p>
-            <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-slate-600">
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Requires intraoral scanner data</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> No physical impressions</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Fully digital workflow</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Efficient and affordable</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Quality zirconia restorations</li>
-            </ul>
-          </div>
-          <div className="premium-card rounded-3xl border-[#D9BC7B]/50 p-8 text-center">
-            <div className="inline-flex rounded-full bg-[#fbf7ee] px-4 py-1 text-sm font-bold text-[#B58A3C]">Option 2</div>
-            <h3 className="mt-6 text-2xl font-bold text-[#09233f]">Traditional Impression Zirconia</h3>
-            <p className="mt-2 text-4xl font-bold text-[#09233f]">$69<span className="text-lg font-normal text-slate-500">+</span></p>
-            <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-slate-600">
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Physical impressions accepted</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Multilayer zirconia</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Highly esthetic restorations</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Traditional workflow support</li>
-            </ul>
-          </div>
-          <div className="premium-card rounded-3xl p-8 text-center">
-            <div className="inline-flex rounded-full bg-[#fbf7ee] px-4 py-1 text-sm font-bold text-[#B58A3C]">Option 3</div>
-            <h3 className="mt-6 text-2xl font-bold text-[#09233f]">Premium U.S.-Manufactured Zirconia</h3>
-            <p className="mt-2 text-4xl font-bold text-[#09233f]">$99<span className="text-lg font-normal text-slate-500">+</span></p>
-            <ul className="mt-6 space-y-3 text-left text-sm leading-6 text-slate-600">
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Produced in U.S.-based facility</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Enhanced quality control</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Premium craftsmanship</li>
-              <li className="flex items-start gap-2"><span className="mt-0.5 text-[#B58A3C]">✓</span> Domestic manufacturing</li>
-            </ul>
-          </div>
-          <div className="mx-auto mt-6 max-w-[1440px] rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center text-sm leading-6 text-slate-500">
-            <strong>Disclaimer:</strong> Prices shown are starting prices and may vary depending on case complexity, materials, workflow requirements, and restoration design.
+          <h2 className="display-font mt-4 text-4xl font-bold text-[#09233f] md:text-5xl">
+            A workflow for every restorative need.
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl leading-8 text-slate-600">
+            Choose from digital workflow, traditional impression, and premium U.S.-made zirconia options based on your case requirements, turnaround needs, and budget.
+          </p>
+          <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-3">
+            {[
+              ["Digital Workflow", "$49"],
+              ["Traditional Impression", "$69"],
+              ["Premium U.S.-Made", "$99"],
+            ].map(([title, price]) => (
+              <div key={title} className="premium-card rounded-2xl p-6">
+                <h3 className="font-bold text-[#09233f]">{title}</h3>
+                <p className="mt-2 text-sm text-slate-500">Starting at</p>
+                <p className="mt-1 text-3xl font-bold text-[#09233f]">{price}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

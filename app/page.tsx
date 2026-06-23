@@ -62,6 +62,27 @@ const steps = [
   ["04", "Deliver", "The approved restoration or design file is prepared for delivery, milling, or manufacturing."],
 ];
 
+const restorationOptions = [
+  {
+    title: "Digital Workflow Zirconia",
+    price: "$49",
+    description:
+      "Requires intraoral scanner data. No physical impressions. Fully digital workflow. Efficient and affordable quality zirconia restorations.",
+  },
+  {
+    title: "Traditional Impression Zirconia",
+    price: "$69",
+    description:
+      "Physical impressions accepted. Crafted using multilayer zirconia for esthetic and reliable restorations.",
+  },
+  {
+    title: "Premium U.S.-Made Zirconia",
+    price: "$99",
+    description:
+      "Produced in our U.S.-based facility with premium quality control, domestic manufacturing, and top-tier craftsmanship.",
+  },
+];
+
 const faqs = [
   ["Who does Louis Dental Center serve?", "We support dentists, dental labs, milling centers, and patients through modern dentistry, CAD/CAM design, and digital laboratory services."],
   ["Can I submit STL files online?", "The site includes a frontend upload workflow for STL, RX forms, photos, and notes. Secure file storage can be connected in the next development phase."],
@@ -112,14 +133,61 @@ export default function Home() {
             <p className="mt-7 text-xl font-bold italic text-[#1E3A5F]">
               Different Solutions. Different Prices. One Service Standard.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/case-upload" className="button-primary">Upload a Case</Link>
-              <Link href="/services" className="button-secondary">Explore Services</Link>
-            </div>
           </div>
           <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] shadow-2xl sm:min-h-[560px]">
             <Image src="/images/hero-dental-lab.png" alt="Modern digital dental laboratory workflow" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
             <div className="absolute inset-0 ring-1 ring-inset ring-white/30" />
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="bg-[#EAF4FF] px-5 py-20 sm:px-8 lg:px-12"
+        id="restoration-solutions"
+        aria-labelledby="restoration-solutions-title"
+      >
+        <div className="mx-auto max-w-[1440px]">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow justify-center">Restoration Options</p>
+            <h2
+              className="display-font mt-4 text-4xl font-bold tracking-tight text-[#1E3A5F] md:text-5xl"
+              id="restoration-solutions-title"
+            >
+              Flexible Restoration Solutions
+            </h2>
+            <p className="mt-5 text-base leading-8 text-[#334155]">
+              Choose the workflow and production option that best fits your practice, budget, turnaround needs, and case requirements.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {restorationOptions.map((option) => (
+              <article
+                key={option.title}
+                className="premium-card group flex h-full flex-col rounded-3xl p-7 sm:p-8"
+              >
+                <h3 className="text-2xl font-bold text-[#1E3A5F]">{option.title}</h3>
+                <p className="mt-6 text-sm font-bold uppercase tracking-[0.16em] text-[#B58A3C]">
+                  Starting at
+                </p>
+                <p className="mt-1 text-5xl font-bold tracking-tight text-[#1E3A5F] transition-transform duration-300 group-hover:translate-x-1 sm:text-6xl">
+                  {option.price}
+                </p>
+                <p className="mt-6 flex-1 leading-7 text-slate-600">{option.description}</p>
+              </article>
+            ))}
+          </div>
+
+          <aside className="mx-auto mt-8 max-w-3xl rounded-2xl border border-[#D9BC7B]/60 bg-[#fbf7ee] px-6 py-4 text-center text-lg font-bold text-[#7B5A22] shadow-sm">
+            Free shipping on orders over $200.
+          </aside>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-xs leading-5 text-slate-500">
+            Prices shown are starting prices and may vary based on case complexity, materials, turnaround requirements, and workflow needs.
+          </p>
+
+          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href="/case-upload" className="button-primary">Upload a Case</Link>
+            <Link href="/services" className="button-secondary">Explore Services</Link>
           </div>
         </div>
       </section>
