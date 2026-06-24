@@ -54,7 +54,8 @@ export async function POST(request: Request) {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "louisdentalcenter@gmail.com",
+      //to: "louisdentalcenter@gmail.com",
+      to: "justinzhang.xlr@gmail.com",
       replyTo: caseDetails.email,
       subject: "New Case Intake - Louis Dental Center",
       text: [
