@@ -4,18 +4,14 @@ import Link from "next/link";
 const quickLinks = [
   ["About", "/about"],
   ["Services", "/services"],
-  ["Dental Lab", "/dental-lab"],
-  ["Digital Dentistry", "/digital-dentistry"],
-  ["AI Dentistry", "/ai-dentistry"],
+  ["Pricing", "/services/pricing"],
   ["FAQs", "/faq"],
 ];
 
 const portalLinks = [
-  ["Upload Case", "/case-upload"],
+  ["Upload a Case", "/case-upload"],
   ["Case Tracking", "/case-tracking"],
-  ["Dentist Portal", "/dentist-portal"],
-  ["Send a Case", "/send-a-case"],
-  ["Pricing", "/pricing"],
+  ["Contact", "/contact"],
 ];
 
 export default function Footer() {
@@ -26,19 +22,19 @@ export default function Footer() {
         <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.25fr_.75fr_.75fr_1fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/logo.png" alt="Louis Dental Center logo" width={58} height={58} className="rounded-full bg-white" />
+              <Image src="/images/logo.png" alt="Louis Dental Center logo" width={58} height={58} className="rounded-full bg-white" />
               <div>
                 <div className="font-bold tracking-[0.08em]">LOUIS DENTAL CENTER</div>
                 <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#d5b16e]">Digital Dentistry & CAD/CAM Laboratory</div>
               </div>
             </Link>
             <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
-              Premium digital dental laboratory and CAD/CAM design services for dentists, dental labs, milling centers, and patients who value precision, communication, and dependable outcomes.
+              Growing digital dental laboratory providing local support in the Dallas–Fort Worth area, digital workflow coordination, CAD/CAM design services, and flexible production options through partner manufacturing resources.
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-[#d5b16e]">Explore</h3>
+            <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-[#d5b16e]">Quick Links</h3>
             <div className="mt-5 grid gap-3 text-sm text-slate-300">
               {quickLinks.map(([label, href]) => <Link key={label} href={href} className="w-fit hover:text-white">{label}</Link>)}
             </div>

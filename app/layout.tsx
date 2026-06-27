@@ -9,14 +9,20 @@ export const metadata: Metadata = {
     template: "%s | Louis Dental Center",
   },
   description:
-    "Premium digital dental laboratory delivering precision crown, bridge, implant, full-arch, and CAD/CAM design solutions.",
+    "Your Comprehensive Dental Solution Center. Combining local support, digital dentistry, domestic manufacturing, and global production resources for modern dental practices.",
   keywords: [
     "dental laboratory",
     "digital dental lab",
     "CAD/CAM dental design",
     "implant restorations",
     "crown and bridge",
+    "zirconia crowns",
+    "all-on-x restorations",
   ],
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({

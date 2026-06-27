@@ -8,10 +8,7 @@ import { useEffect, useState } from "react";
 const links = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Dental Lab", href: "/dental-lab" },
-  { label: "Digital Dentistry", href: "/digital-dentistry" },
-  { label: "AI Dentistry", href: "/ai-dentistry" },
-  { label: "Portal", href: "/dentist-portal" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -25,7 +22,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#1E3A5F]/95 text-white backdrop-blur-xl">
       <nav className="mx-auto flex h-[78px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12" aria-label="Primary navigation">
         <Link href="/" className="group flex min-w-0 items-center gap-3" aria-label="Louis Dental Center home">
-          <Image src="/logo.png" alt="Louis Dental Center logo" width={50} height={50} priority className="h-11 w-11 shrink-0 rounded-full bg-white ring-1 ring-white/30 transition-transform duration-300 group-hover:scale-105" />
+          <Image src="/images/logo.png" alt="Louis Dental Center logo" width={50} height={50} priority className="h-11 w-11 shrink-0 rounded-full bg-white ring-1 ring-white/30 transition-transform duration-300 group-hover:scale-105" />
           <div className="min-w-0">
             <div className="truncate text-[15px] font-bold tracking-[0.08em] text-white sm:text-base">LOUIS DENTAL CENTER</div>
             <div className="hidden text-[10px] font-medium uppercase tracking-[0.18em] text-[#D9BC7B] sm:block">Digital Dental Laboratory</div>
@@ -42,7 +39,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 xl:flex">
           <a href="tel:+19493786176" className="button-light text-sm">Call Us</a>
-          <Link href="/case-upload" className="rounded-full bg-white px-6 py-[0.9rem] text-sm font-bold text-[#1E3A5F] hover:bg-[#EAF4FF]">Upload Case</Link>
+          <Link href="/case-upload" className="rounded-full bg-white px-6 py-[0.9rem] text-sm font-bold text-[#1E3A5F] hover:bg-[#EAF4FF]">Upload a Case</Link>
         </div>
 
         <button type="button" className="relative h-10 w-10 text-white xl:hidden" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
@@ -61,7 +58,7 @@ export default function Navbar() {
           ))}
           <div className="grid grid-cols-2 gap-3 pt-4">
             <a href="tel:+19493786176" className="button-light text-center text-sm">Call Us</a>
-            <Link href="/case-upload" className="rounded-full bg-white px-6 py-[0.9rem] text-center text-sm font-bold text-[#1E3A5F]">Upload Case</Link>
+            <Link href="/case-upload" className="rounded-full bg-white px-6 py-[0.9rem] text-center text-sm font-bold text-[#1E3A5F]">Upload a Case</Link>
           </div>
         </div>
       </div>

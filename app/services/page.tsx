@@ -1,83 +1,148 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const patientServices = [
-  ["General Dentistry", "Preventive and restorative dental care supported by clear communication and modern digital records."],
-  ["Cosmetic Dentistry", "Smile-focused restorative planning including veneers, crowns, shade communication, and esthetic design."],
-  ["Restorative Dentistry", "Crowns, bridges, implant restorations, and treatment workflows supported by in-house digital lab expertise."],
-  ["Dental Implants", "Implant restoration planning with attention to function, esthetics, emergence profile, and long-term maintenance."],
-  ["Digital Impressions", "Scanner-friendly workflows that reduce traditional impression friction and support faster case communication."],
-  ["Complex Case Planning", "Collaboration across clinical and laboratory perspectives for multi-unit, full-arch, and interdisciplinary cases."],
-];
-
-const professionalServices = [
-  "CAD/CAM dental design",
-  "Crown and bridge design",
-  "Implant crown design",
-  "Custom abutment design",
-  "Full arch and All-on-X workflow support",
-  "STL review and digital case intake",
+const services = [
+  {
+    title: "All-on-X Restorations",
+    image: "/images/all-on-x.png",
+    alt: "All-on-X full arch dental restoration",
+    price: "Starting at $2,999 per arch",
+    highlights: [
+      "Immediate provisional restoration",
+      "Final zirconia prosthesis",
+      "Complete full-arch rehabilitation",
+      "Rapid turnaround",
+    ],
+  },
+  {
+    title: "Removable Dentures",
+    image: "/images/dentures.jpeg",
+    alt: "Removable dentures",
+    highlights: [
+      "3D printed dentures",
+      "Traditional acrylic dentures",
+      "Choose digital or conventional workflow",
+    ],
+  },
+  {
+    title: "Model-less Zirconia Crowns",
+    image: "/images/zirconia-crowns.png",
+    alt: "Model-less zirconia crowns",
+    price: "Starting at $29.90",
+    highlights: [
+      "No physical model required",
+      "No-remake policy",
+      "If there is any issue, simply submit a new scan",
+    ],
+  },
+  {
+    title: "Metal Frameworks",
+    image: "/images/metal-framework.jpeg",
+    alt: "Metal framework for removable partial denture",
+    price: "Starting at $89",
+    highlights: [
+      "Simple and economical framework solution",
+      "For removable partial dentures",
+    ],
+  },
+  {
+    title: "CAD/CAM Ti Custom Abutment & Crown Package",
+    image: "/images/custom-abutment-package.png",
+    alt: "CAD/CAM titanium custom abutment and crown package",
+    price: "Starting at $230",
+    highlights: [
+      "Precision titanium custom abutment",
+      "Implant crown package",
+    ],
+  },
+  {
+    title: "Free Intraoral Scanner Program",
+    image: "/images/free-intraoral-scanner.jpeg",
+    alt: "Free intraoral scanner program",
+    highlights: [
+      "For qualified dental practices",
+      "Helping clinics transition to digital dentistry",
+      "Improve digital workflow efficiency",
+    ],
+  },
 ];
 
 export default function ServicesPage() {
   return (
-    <main className="bg-white">
+    <main>
+      {/* ─── HERO ─── */}
       <section className="bg-[#06182b] px-5 py-20 text-white sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[1440px]">
           <p className="eyebrow text-[#d9bc7b]">Services</p>
-          <h1 className="display-font mt-4 max-w-4xl text-5xl font-bold md:text-6xl">Modern dental care supported by digital laboratory precision.</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">Louis Dental Center brings together patient-centered dentistry and professional CAD/CAM design support for dentists, laboratories, and milling centers.</p>
+          <h1 className="display-font mt-4 max-w-4xl text-5xl font-bold md:text-6xl">
+            Our Core Solutions
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+            Flexible solutions for every dental practice, from affordable digital workflows to complex implant restorations.
+          </p>
         </div>
       </section>
 
+      {/* ─── SERVICE CARDS ─── */}
       <section className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[1440px]">
-          <h2 className="display-font text-4xl font-bold text-[#09233f]">For patients</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {patientServices.map(([title, text]) => (
-              <div key={title} className="premium-card rounded-3xl p-7">
-                <h3 className="text-2xl font-bold text-[#09233f]">{title}</h3>
-                <p className="mt-3 leading-7 text-slate-600">{text}</p>
-              </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <article
+                key={service.title}
+                className="premium-card group flex h-full flex-col overflow-hidden rounded-3xl"
+              >
+                <div className="relative aspect-[16/11] overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.alt}
+                    fill
+                    sizes="(min-width: 1024px) 31vw, (min-width: 768px) 46vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <h3 className="text-2xl font-bold text-[#1E3A5F]">
+                    {service.title}
+                  </h3>
+                  <div className="mt-3 flex-1 space-y-2 leading-7 text-slate-600">
+                    {service.highlights.map((item, i) => (
+                      <p key={i}>{item}</p>
+                    ))}
+                  </div>
+                  {service.price && (
+                    <div className="mt-5 inline-block self-start rounded-full bg-[#1E3A5F] px-5 py-2 text-sm font-bold text-white">
+                      {service.price}
+                    </div>
+                  )}
+                  {!service.price && service.title === "Free Intraoral Scanner Program" && (
+                    <div className="mt-5 inline-block self-start rounded-full bg-[#D9BC7B] px-5 py-2 text-sm font-bold text-[#1E3A5F]">
+                      Qualified Practices Only
+                    </div>
+                  )}
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#F8FAFC] px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1440px] text-center">
-          <p className="eyebrow justify-center">Flexible Restoration Solutions</p>
-          <h2 className="display-font mt-4 text-4xl font-bold text-[#09233f] md:text-5xl">
-            A workflow for every restorative need.
+      {/* ─── CTA ─── */}
+      <section className="bg-[#EAF4FF] px-5 py-20 text-center sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1440px]">
+          <h2 className="display-font text-4xl font-bold text-[#1E3A5F] md:text-5xl">
+            Ready to get started?
           </h2>
-          <p className="mx-auto mt-5 max-w-3xl leading-8 text-slate-600">
-            Choose from digital workflow, traditional impression, and premium U.S.-made zirconia options based on your case requirements, turnaround needs, and budget.
+          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">
+            Submit your first case or contact us to learn more about our services.
           </p>
-          <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-3">
-            {[
-              ["Digital Workflow", "$49"],
-              ["Traditional Impression", "$69"],
-              ["Premium U.S.-Made", "$99"],
-            ].map(([title, price]) => (
-              <div key={title} className="premium-card rounded-2xl p-6">
-                <h3 className="font-bold text-[#09233f]">{title}</h3>
-                <p className="mt-2 text-sm text-slate-500">Starting at</p>
-                <p className="mt-1 text-3xl font-bold text-[#09233f]">{price}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-slate-50 px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="eyebrow">For professionals</p>
-            <h2 className="display-font mt-4 text-4xl font-bold text-[#09233f]">Digital design support for clinical and lab teams.</h2>
-            <p className="mt-5 leading-8 text-slate-600">We help dental professionals move cases through a clearer digital workflow: case intake, design review, CAD/CAM planning, and delivery coordination.</p>
-            <Link href="/case-upload" className="button-primary mt-8">Upload a Case</Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {professionalServices.map((service) => <div key={service} className="rounded-2xl border border-slate-200 bg-white p-5 font-semibold text-[#09233f] shadow-sm">✓ {service}</div>)}
+          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href="/case-upload" className="button-primary">
+              Upload a Case
+            </Link>
+            <Link href="/contact" className="button-secondary">
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
