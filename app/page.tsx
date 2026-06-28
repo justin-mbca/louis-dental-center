@@ -33,14 +33,14 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       {/* ─── HERO BANNER ─── */}
-      <section className="relative min-h-[70vh]">
+      <section className="relative min-h-[80vh] sm:min-h-[90vh] lg:min-h-[100vh]">
         <Image
           src="/images/home-hero.jpeg"
           alt="Louis Dental Center — modern dental laboratory"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-contain"
         />
       </section>
 
