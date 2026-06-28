@@ -80,7 +80,7 @@ export default function PricingPage() {
         <div className="mx-auto max-w-[1440px]">
           <div className="rounded-3xl bg-gradient-to-br from-[#1E3A5F] to-[#0f2a45] p-8 text-white shadow-xl ring-1 ring-[#D9BC7B]/30 md:p-12">
             <div className="flex flex-col items-start gap-1">
-              <span className="rounded-full bg-[#D9BC7B]/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#D9BC7B]">
+              <span className="rounded-full bg-[#D9BC7B]/20 px-4 py-1.5 text-base font-bold uppercase tracking-[0.12em] text-[#D9BC7B]">
                 Limited Time Offer
               </span>
               <h2 className="display-font mt-3 text-3xl font-bold md:text-4xl">
@@ -91,29 +91,29 @@ export default function PricingPage() {
               <div className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#D9BC7B] text-xs font-bold text-[#1E3A5F]">✦</span>
                 <div>
-                  <p className="font-semibold">Free first zirconia crown for qualified new dental clinics*</p>
+                  <p className="text-lg font-semibold leading-8">Free first zirconia crown for qualified new dental clinics*</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#D9BC7B] text-xs font-bold text-[#1E3A5F]">✦</span>
                 <div>
-                  <p className="font-semibold">Free shipping on qualifying orders over $200</p>
+                  <p className="text-lg font-semibold leading-8">Free shipping on qualifying orders over $200</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#D9BC7B] text-xs font-bold text-[#1E3A5F]">✦</span>
                 <div>
-                  <p className="font-semibold">Free business card design for partner clinics</p>
+                  <p className="text-lg font-semibold leading-8">Free business card design for partner clinics</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#D9BC7B] text-xs font-bold text-[#1E3A5F]">✦</span>
                 <div>
-                  <p className="font-semibold">Free intraoral scanner program for qualified practices</p>
+                  <p className="text-lg font-semibold leading-8">Free intraoral scanner program for qualified practices</p>
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-xs text-slate-400">*Terms and conditions apply.</p>
+            <p className="mt-6 text-base leading-7 text-slate-400">*Terms and conditions apply.</p>
           </div>
         </div>
       </section>
@@ -127,8 +127,8 @@ export default function PricingPage() {
                 key={category}
                 className="premium-card overflow-hidden rounded-2xl"
               >
-                <div className="bg-[#1E3A5F] px-6 py-4">
-                  <h3 className="text-lg font-bold text-white">
+                <div className="bg-[#1E3A5F] px-6 py-5">
+                  <h3 className="text-2xl font-bold text-white">
                     {category}
                   </h3>
                 </div>
@@ -136,17 +136,17 @@ export default function PricingPage() {
                   {items.map((item, idx) => (
                     <div
                       key={`${item.product}-${idx}`}
-                      className="flex items-center justify-between px-6 py-3.5 text-sm"
+                      className="flex items-center justify-between px-6 py-4"
                     >
-                      <span className="text-slate-700">
+                      <span className="text-lg leading-8 text-slate-700">
                         {item.product}
                         {item.note ? (
-                          <span className="ml-1 text-xs text-slate-400">
+                          <span className="ml-1 text-base text-slate-400">
                             ({item.note})
                           </span>
                         ) : null}
                       </span>
-                      <span className="ml-4 shrink-0 font-bold text-[#1E3A5F]">
+                      <span className="ml-4 shrink-0 text-lg font-bold text-[#1E3A5F]">
                         {formatPrice(item.price)}
                       </span>
                     </div>
@@ -155,7 +155,7 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center text-xs text-slate-400">
+          <p className="mt-8 text-center text-base leading-7 text-slate-400">
             Prices sourced from official price list. Contact us for current pricing and custom quotes.
           </p>
         </div>
@@ -167,10 +167,10 @@ export default function PricingPage() {
           <h2 className="display-font text-4xl font-bold text-[#1E3A5F] md:text-5xl">
             Questions about pricing?
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-700">
             Contact us for custom quotes, volume pricing, or clarification on any service.
           </p>
-          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/contact" className="button-primary">
               Contact Us
             </Link>

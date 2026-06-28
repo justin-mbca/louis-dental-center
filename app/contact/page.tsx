@@ -76,24 +76,24 @@ export default function ContactPage() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-[#1E3A5F]">Louis Dental Center</h2>
-                <p className="text-sm text-slate-500">Your Comprehensive Dental Solution Center</p>
+                <p className="text-base leading-7 text-slate-500">Your Comprehensive Dental Solution Center</p>
               </div>
             </div>
 
             <div className="mt-8 space-y-6">
               <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
-                <h3 className="font-bold text-[#1E3A5F]">📞 Phone</h3>
+                <h3 className="text-xl font-bold text-[#1E3A5F]">📞 Phone</h3>
                 <p className="mt-2 text-lg text-[#8f671f]">1 (949) 378-6176</p>
               </div>
 
               <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
-                <h3 className="font-bold text-[#1E3A5F]">✉️ Email</h3>
+                <h3 className="text-xl font-bold text-[#1E3A5F]">✉️ Email</h3>
                 <a href="mailto:louisdentalcenter@gmail.com" className="mt-2 block text-lg text-[#8f671f] break-all hover:underline">louisdentalcenter@gmail.com</a>
               </div>
 
               <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
-                <h3 className="font-bold text-[#1E3A5F]"> Business Hours</h3>
-                <div className="mt-3 space-y-1 text-sm text-slate-600">
+                <h3 className="text-xl font-bold text-[#1E3A5F]"> Business Hours</h3>
+                <div className="mt-3 space-y-2 text-base leading-7 text-slate-600">
                   <div className="flex justify-between"><span>Monday – Friday</span><span>8:00 AM – 5:00 PM</span></div>
                   <div className="flex justify-between"><span>Saturday</span><span>By appointment</span></div>
                   <div className="flex justify-between"><span>Sunday</span><span>Closed</span></div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
           {/* ─── FORM ─── */}
           <form className="premium-card rounded-3xl p-7" onSubmit={handleSubmit}>
             <h2 className="text-2xl font-bold text-[#1E3A5F]">Send us a message</h2>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
+            <p className="mt-2 text-lg leading-8 text-slate-600">
               Fill out the form and our team will get back to you.
             </p>
 
@@ -162,12 +162,12 @@ export default function ContactPage() {
             <div aria-live="polite">
               {status === "success" && (
                 <div className="mt-6 rounded-2xl bg-emerald-50 p-5 text-emerald-900">
-                  <p className="font-bold">Message Sent Successfully</p>
-                  <p className="mt-1">Thank you. Louis Dental Center has received your message.</p>
+                  <p className="text-lg font-bold">Message Sent Successfully</p>
+                  <p className="mt-1 text-base leading-7">Thank you. Louis Dental Center has received your message.</p>
                 </div>
               )}
               {status === "error" && (
-                <p className="mt-6 rounded-2xl bg-red-50 p-5 font-semibold text-red-800">
+                <p className="mt-6 rounded-2xl bg-red-50 p-5 text-base font-semibold leading-7 text-red-800">
                   Message failed to send. Please try again later.
                 </p>
               )}
@@ -182,7 +182,7 @@ export default function ContactPage() {
           <h2 className="display-font text-4xl font-bold text-[#1E3A5F] md:text-5xl">
             Ready to work together?
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-700">
             Contact us to discuss your laboratory needs, request pricing, schedule a consultation, or learn about our digital workflow.
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">

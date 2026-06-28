@@ -85,19 +85,19 @@ export default function Home() {
           <div className="mt-6 grid grid-cols-3 gap-3 sm:hidden">
             <Link
               href="/services/pricing"
-              className="rounded-full bg-[#1E3A5F] px-4 py-3 text-center text-sm font-bold text-white hover:bg-[#294d78] transition-colors"
+              className="rounded-full bg-[#1E3A5F] px-4 py-3 text-center text-base font-bold text-white transition-colors hover:bg-[#294d78]"
             >
               View Price List
             </Link>
             <Link
               href="/contact"
-              className="rounded-full bg-[#1E3A5F] px-4 py-3 text-center text-sm font-bold text-white hover:bg-[#294d78] transition-colors"
+              className="rounded-full bg-[#1E3A5F] px-4 py-3 text-center text-base font-bold text-white transition-colors hover:bg-[#294d78]"
             >
               Contact Us
             </Link>
             <Link
               href="/services"
-              className="rounded-full bg-[#1E3A5F] px-4 py-3 text-center text-sm font-bold text-white hover:bg-[#294d78] transition-colors"
+              className="rounded-full bg-[#1E3A5F] px-4 py-3 text-center text-base font-bold text-white transition-colors hover:bg-[#294d78]"
             >
               Learn More
             </Link>
@@ -112,12 +112,12 @@ export default function Home() {
           <h2 className="display-font mt-4 text-4xl font-bold text-[#1E3A5F] md:text-5xl">
             Become a Partner
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-700">
             We welcome dentists and dental practices interested in partnering with us.
             Our team will guide you through account setup, digital workflow onboarding,
             pricing, shipping instructions, and ongoing laboratory support.
           </p>
-          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/contact" className="button-primary">
               Become a Partner
             </Link>
@@ -135,14 +135,14 @@ export default function Home() {
           <h2 className="display-font mt-4 text-center text-4xl font-bold text-[#1E3A5F] md:text-5xl">
             How to Start Working With Us
           </h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-5">
+          <div className="mt-14 grid gap-10 md:grid-cols-5">
             {steps.map((item, index) => (
               <div key={item.step} className="relative text-center">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#1E3A5F] text-2xl font-bold text-white shadow-lg">
                   {item.step}
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-[#1E3A5F]">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
+                <h3 className="mt-6 text-2xl font-bold text-[#1E3A5F]">{item.title}</h3>
+                <p className="mt-3 text-lg leading-8 text-slate-600">{item.description}</p>
                 {index < steps.length - 1 && (
                   <div className="mt-4 text-2xl text-[#D9BC7B] hidden md:block">↓</div>
                 )}
@@ -159,11 +159,11 @@ export default function Home() {
           <h2 className="display-font mt-4 text-4xl font-bold text-[#1E3A5F] md:text-5xl">
             Existing Customers
           </h2>
-          <p className="mx-auto mt-5 max-w-3xl leading-8 text-slate-600">
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
             Existing customers will receive secure login credentials for our laboratory ordering system.
             Once your account is approved, you will be able to:
           </p>
-          <div className="mx-auto mt-8 grid max-w-3xl gap-3 sm:grid-cols-2">
+          <div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
             {[
               "Submit laboratory cases",
               "Upload STL files",
@@ -174,14 +174,14 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 rounded-2xl border border-[#D9BC7B]/40 bg-white px-5 py-4 font-semibold text-[#334155] shadow-sm"
+                className="flex items-center gap-3 rounded-2xl border border-[#D9BC7B]/40 bg-white px-5 py-4 text-lg font-semibold text-[#334155] shadow-sm"
               >
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1E3A5F] text-xs text-white">✓</span>
                 {item}
               </div>
             ))}
           </div>
-          <div className="mt-8 inline-block rounded-full bg-[#D9BC7B]/20 px-6 py-3 text-sm font-bold text-[#1E3A5F]">
+          <div className="mt-10 inline-block rounded-full bg-[#D9BC7B]/20 px-6 py-3 text-lg font-bold text-[#1E3A5F]">
             Customer Ordering Portal — Coming Soon
           </div>
         </div>

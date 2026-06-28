@@ -105,18 +105,18 @@ export default function ServicesPage() {
                   <h3 className="text-2xl font-bold text-[#1E3A5F]">
                     {service.title}
                   </h3>
-                  <div className="mt-3 flex-1 space-y-2 leading-7 text-slate-600">
+                  <div className="mt-3 flex-1 space-y-2 text-lg leading-8 text-slate-600">
                     {service.highlights.map((item, i) => (
                       <p key={i}>{item}</p>
                     ))}
                   </div>
                   {service.price && (
-                    <div className="mt-5 inline-block self-start rounded-full bg-[#1E3A5F] px-5 py-2 text-sm font-bold text-white">
+                    <div className="mt-5 inline-block self-start rounded-full bg-[#1E3A5F] px-5 py-2 text-base font-bold text-white">
                       {service.price}
                     </div>
                   )}
                   {!service.price && service.title === "Free Intraoral Scanner Program" && (
-                    <div className="mt-5 inline-block self-start rounded-full bg-[#D9BC7B] px-5 py-2 text-sm font-bold text-[#1E3A5F]">
+                    <div className="mt-5 inline-block self-start rounded-full bg-[#D9BC7B] px-5 py-2 text-base font-bold text-[#1E3A5F]">
                       Qualified Practices Only
                     </div>
                   )}
@@ -133,10 +133,10 @@ export default function ServicesPage() {
           <h2 className="display-font text-4xl font-bold text-[#1E3A5F] md:text-5xl">
             Interested in our services?
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-700">
             Contact us to discuss your laboratory needs and learn how we can support your practice.
           </p>
-          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/contact" className="button-primary">
               Become a Partner
             </Link>

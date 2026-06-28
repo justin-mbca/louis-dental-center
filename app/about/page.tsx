@@ -143,7 +143,7 @@ export default function AboutPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 rounded-2xl border border-[#D9BC7B]/40 bg-white px-5 py-4 font-semibold text-[#334155] shadow-sm transition-shadow hover:shadow-md"
+                className="flex items-center gap-3 rounded-2xl border border-[#D9BC7B]/40 bg-white px-5 py-4 text-lg font-semibold text-[#334155] shadow-sm transition-shadow hover:shadow-md"
               >
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1E3A5F] text-xs text-white">
                   ✓
@@ -171,10 +171,10 @@ export default function AboutPage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1E3A5F] text-lg font-bold text-white">
                   {feature.icon}
                 </div>
-                <h3 className="mt-5 text-xl font-bold text-[#1E3A5F]">
+                <h3 className="mt-5 text-2xl font-bold text-[#1E3A5F]">
                   {feature.title}
                 </h3>
-                <p className="mt-3 leading-7 text-slate-600">
+                <p className="mt-3 text-lg leading-8 text-slate-600">
                   {feature.description}
                 </p>
               </div>
@@ -209,12 +209,12 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-[#1E3A5F]">
                     {service.title}
                   </h3>
-                  <p className="mt-3 flex-1 leading-7 text-slate-600">
+                  <p className="mt-3 flex-1 text-lg leading-8 text-slate-600">
                     {service.description}
                   </p>
                   <Link
                     href="/services"
-                    className="mt-5 inline-block self-start rounded-full border border-[#1E3A5F] px-5 py-2 text-sm font-bold text-[#1E3A5F] transition-colors hover:bg-[#1E3A5F] hover:text-white"
+                    className="mt-5 inline-block self-start rounded-full border border-[#1E3A5F] px-5 py-2 text-base font-bold text-[#1E3A5F] transition-colors hover:bg-[#1E3A5F] hover:text-white"
                   >
                     Learn More
                   </Link>
@@ -240,10 +240,10 @@ export default function AboutPage() {
               restorative solutions.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="rounded-full bg-white px-8 py-4 text-sm font-bold text-[#1E3A5F] hover:bg-[#EAF4FF]">
+              <Link href="/contact" className="rounded-full bg-white px-8 py-4 text-base font-bold text-[#1E3A5F] hover:bg-[#EAF4FF]">
                 Become a Partner
               </Link>
-              <Link href="/services" className="rounded-full border-2 border-white/50 px-8 py-4 text-sm font-bold text-white hover:bg-white/10">
+              <Link href="/services" className="rounded-full border-2 border-white/50 px-8 py-4 text-base font-bold text-white hover:bg-white/10">
                 View Special Offers
               </Link>
             </div>
@@ -257,7 +257,7 @@ export default function AboutPage() {
           <h2 className="display-font text-4xl font-bold text-[#1E3A5F] md:text-5xl">
             Ready to work with us?
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-700">
             Take the first step toward partnering with Louis Dental Center.
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">

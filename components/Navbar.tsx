@@ -26,7 +26,7 @@ export default function Navbar() {
         <Link href="/" className="group flex min-w-0 shrink-0 items-center gap-3" aria-label="Louis Dental Center home">
           {isHome ? (
             <div className="flex h-[38px] w-[38px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-md ring-1 ring-white/60 transition-transform duration-300 group-hover:scale-105">
-              <Image src="/images/logo.png" alt="Louis Dental Center logo" width={38} height={38} priority className="h-full w-full object-cover" />
+              <Image src="/images/logo.jpeg" alt="Louis Dental Center logo" width={38} height={38} priority className="h-full w-full object-cover" />
             </div>
           ) : (
             <>
@@ -34,8 +34,8 @@ export default function Navbar() {
                 <Image src="/images/logo.jpeg" alt="Louis Dental Center logo" width={50} height={50} priority className="h-full w-full scale-[1.55] object-cover" />
               </div>
               <div className="min-w-0">
-                <div className="truncate text-[15px] font-bold tracking-[0.08em] text-white sm:text-base">LOUIS DENTAL CENTER</div>
-                <div className="hidden text-[10px] font-medium uppercase tracking-[0.18em] text-[#D9BC7B] sm:block">Digital Dental Laboratory</div>
+                <div className="truncate text-base font-bold tracking-[0.08em] text-white lg:text-lg">LOUIS DENTAL CENTER</div>
+                <div className="hidden text-xs font-medium uppercase tracking-[0.18em] text-[#D9BC7B] sm:block">Digital Dental Laboratory</div>
               </div>
             </>
           )}
@@ -43,7 +43,7 @@ export default function Navbar() {
 
         <div className="hidden flex-1 items-center justify-center gap-9 sm:flex lg:gap-10">
           {links.map((link) => (
-            <Link key={link.label} href={link.href} className="nav-link text-sm font-semibold tracking-[0.25px] text-slate-200 transition-colors duration-200 hover:text-white sm:text-base lg:text-lg">
+            <Link key={link.label} href={link.href} className="nav-link text-base font-semibold tracking-[0.25px] text-slate-200 transition-colors duration-200 hover:text-white lg:text-xl">
               {link.label}
             </Link>
           ))}
@@ -61,7 +61,7 @@ export default function Navbar() {
       <div className={`border-t border-white/10 bg-[#1E3A5F] px-5 py-5 shadow-xl sm:hidden ${open ? "block" : "hidden"}`}>
         <div className="grid gap-1">
           {links.map((link) => (
-            <Link key={link.label} href={link.href} className="rounded-xl px-4 py-3.5 text-base font-semibold tracking-[0.25px] text-slate-100 transition-colors duration-200 hover:bg-white/10 hover:text-white">
+            <Link key={link.label} href={link.href} className="rounded-xl px-4 py-3.5 text-lg font-semibold tracking-[0.25px] text-slate-100 transition-colors duration-200 hover:bg-white/10 hover:text-white">
               {link.label}
             </Link>
           ))}
