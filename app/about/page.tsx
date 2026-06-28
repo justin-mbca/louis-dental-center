@@ -113,7 +113,7 @@ export default function AboutPage() {
             </div>
             <div className="relative min-h-[400px] overflow-hidden rounded-[2rem] shadow-2xl sm:min-h-[500px]">
               <Image
-                src="/images/company.jpeg"
+                src="/images/company.png"
                 alt="Louis Dental Center facility"
                 fill
                 priority
