@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       {/* ─── HERO BANNER ─── */}
-      <section className="relative min-h-[70vh] flex items-center">
+      <section className="relative min-h-[70vh]">
         <Image
           src="/images/home-hero.jpeg"
           alt="Louis Dental Center — modern dental laboratory"
@@ -14,23 +14,6 @@ export default function Home() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 text-center">
-          <h1 className="display-font text-4xl font-bold text-white sm:text-5xl lg:text-6xl leading-[1.1] max-w-4xl mx-auto">
-            Precision Dental Solutions for Modern Practices
-          </h1>
-          <p className="mt-5 text-lg text-white/80 max-w-2xl mx-auto">
-            Combining local support, digital dentistry, and global production resources.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/case-upload" className="rounded-full bg-white px-8 py-4 text-base font-bold text-[#1E3A5F] hover:bg-[#EAF4FF] shadow-lg hover:shadow-xl transition-all">
-              Upload a Case
-            </Link>
-            <Link href="/contact" className="rounded-full border-2 border-white px-8 py-4 text-base font-bold text-white hover:bg-white/10 transition-all">
-              Contact Us
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* ─── ZIRCONIA RESTORATION OVERVIEW ─── */}

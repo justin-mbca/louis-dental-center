@@ -54,13 +54,16 @@ export default function AboutPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative min-h-[400px] overflow-hidden rounded-[2rem] shadow-2xl">
-              <Image
-                src="/images/logo.png"
-                alt="Louis Dental Center"
-                fill
-                className="object-contain p-12 bg-[#F8FAFC]"
-              />
+            <div className="flex min-h-[400px] items-center justify-center overflow-hidden rounded-[2rem] bg-[#F8FAFC] shadow-2xl">
+              <div className="flex h-56 w-56 items-center justify-center overflow-hidden rounded-[1.75rem] bg-white shadow-xl ring-1 ring-slate-200">
+                <Image
+                  src="/images/logo.jpeg"
+                  alt="Louis Dental Center"
+                  width={200}
+                  height={200}
+                  className="h-full w-full scale-[1.22] object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

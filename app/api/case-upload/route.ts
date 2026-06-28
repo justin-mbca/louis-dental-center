@@ -51,11 +51,17 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "A valid email is required." }, { status: 400 });
     }
 
+    const recipients =
+      process.env.CONTACT_RECIPIENTS
+        ?.split(",")
+        .map(email => email.trim())
+        .filter(Boolean) ||
+      ["louisdentalcenter@gmail.com"];
+
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      //to: "louisdentalcenter@gmail.com",
-      to: "justinzhang.xlr@gmail.com",
+      to: recipients,
       replyTo: caseDetails.email,
       subject: "New Case Intake - Louis Dental Center",
       text: [

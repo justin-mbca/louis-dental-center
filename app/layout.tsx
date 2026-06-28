@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     "all-on-x restorations",
   ],
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/images/logo.jpeg",
+    apple: "/images/logo.jpeg",
   },
 };
 

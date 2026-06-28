@@ -23,13 +23,15 @@ export default function ContactPage() {
           {/* ─── INFO ─── */}
           <div>
             <div className="flex items-center gap-4">
-              <Image
-                src="/images/logo.png"
-                alt="Louis Dental Center"
-                width={64}
-                height={64}
-                className="rounded-full bg-white"
-              />
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white p-1.5">
+                <Image
+                  src="/images/logo.jpeg"
+                  alt="Louis Dental Center"
+                  width={64}
+                  height={64}
+                  className="h-full w-full object-contain"
+                />
+              </div>
               <div>
                 <h2 className="text-2xl font-bold text-[#1E3A5F]">Louis Dental Center</h2>
                 <p className="text-sm text-slate-500">Your Comprehensive Dental Solution Center</p>
@@ -44,7 +46,7 @@ export default function ContactPage() {
 
               <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
                 <h3 className="font-bold text-[#1E3A5F]">✉️ Email</h3>
-                <a href="mailto:frank28cdt@gmail.com" className="mt-2 block text-lg text-[#8f671f] break-all hover:underline">frank28cdt@gmail.com</a>
+                <a href="mailto:louisdentalcenter@gmail.com" className="mt-2 block text-lg text-[#8f671f] break-all hover:underline">louisdentalcenter@gmail.com</a>
               </div>
 
               <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">

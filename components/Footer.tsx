@@ -22,7 +22,9 @@ export default function Footer() {
         <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.25fr_.75fr_.75fr_1fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/images/logo.png" alt="Louis Dental Center logo" width={58} height={58} className="rounded-full bg-white" />
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white p-1.5">
+                <Image src="/images/logo.jpeg" alt="Louis Dental Center logo" width={58} height={58} className="h-full w-full object-contain" />
+              </div>
               <div>
                 <div className="font-bold tracking-[0.08em]">LOUIS DENTAL CENTER</div>
                 <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#d5b16e]">Digital Dentistry & CAD/CAM Laboratory</div>
@@ -51,7 +53,7 @@ export default function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-[#d5b16e]">Contact</h3>
             <div className="mt-5 space-y-4 text-sm leading-6 text-slate-300">
               <a href="tel:+19493786176" className="block hover:text-white">1 (949) 378-6176</a>
-              <a href="mailto:frank28cdt@gmail.com" className="block break-all hover:text-white">frank28cdt@gmail.com</a>
+              <a href="mailto:louisdentalcenter@gmail.com" className="block break-all hover:text-white">louisdentalcenter@gmail.com</a>
               <p>Serving dental practices, laboratories, milling centers, and patients nationwide.</p>
             </div>
           </div>
