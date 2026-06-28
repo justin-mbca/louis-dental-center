@@ -52,7 +52,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-[#d5b16e]">Contact</h3>
             <div className="mt-5 space-y-4 text-sm leading-6 text-slate-300">
-              <a href="tel:+19493786176" className="block hover:text-white">1 (949) 378-6176</a>
+              <span className="block text-slate-300">1 (949) 378-6176</span>
               <a href="mailto:louisdentalcenter@gmail.com" className="block break-all hover:text-white">louisdentalcenter@gmail.com</a>
               <p>Serving dental practices, laboratories, milling centers, and patients nationwide.</p>
             </div>

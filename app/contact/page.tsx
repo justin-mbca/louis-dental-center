@@ -41,7 +41,7 @@ export default function ContactPage() {
             <div className="mt-8 space-y-6">
               <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
                 <h3 className="font-bold text-[#1E3A5F]">📞 Phone</h3>
-                <a href="tel:+19493786176" className="mt-2 block text-lg text-[#8f671f] hover:underline">1 (949) 378-6176</a>
+                <p className="mt-2 text-lg text-[#8f671f]">1 (949) 378-6176</p>
               </div>
 
               <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">

@@ -17,17 +17,18 @@ function parseCSV(text: string): PricingRow[] {
     const line = lines[i].trim();
     if (!line) continue;
 
-    const match = line.match(/(".*?"|[^,]+)(?:\s*,\s*|$)/g);
-    if (!match || match.length < 4) continue;
+    const parts = line.split(",");
+    if (parts.length < 3) continue;
 
-    const values = match.map((v) => v.replace(/^"|"$/g, "").replace(/""/g, '"').trim());
-    const [category, product, price, note] = values;
+    const [category, product, price, ...rest] = parts;
+    const note = rest.length > 0 ? rest.join(",").trim() : "";
+
     if (category && product) {
       rows.push({
-        category: category || "",
-        product: product || "",
-        price: price || "",
-        note: note || "",
+        category: category.trim(),
+        product: product.trim(),
+        price: price.trim(),
+        note: note,
       });
     }
   }

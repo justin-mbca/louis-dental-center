@@ -31,7 +31,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden items-center gap-6 xl:flex">
+        <div className="hidden items-center gap-6 sm:flex">
           {links.map((link) => (
             <Link key={link.label} href={link.href} className="nav-link text-sm font-semibold text-slate-200 hover:text-white">
               {link.label}
@@ -39,12 +39,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 xl:flex">
-          <a href="tel:+19493786176" className="button-light text-sm">Call Us</a>
-          <Link href="/case-upload" className="rounded-full bg-white px-6 py-[0.9rem] text-sm font-bold text-[#1E3A5F] hover:bg-[#EAF4FF]">Upload a Case</Link>
-        </div>
-
-        <button type="button" className="relative h-10 w-10 text-white xl:hidden" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
+        <button type="button" className="relative h-10 w-10 text-white sm:hidden" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           <span className={`menu-line top-3 ${open ? "translate-y-2 rotate-45" : ""}`} />
           <span className={`menu-line top-5 ${open ? "opacity-0" : ""}`} />
           <span className={`menu-line top-7 ${open ? "-translate-y-2 -rotate-45" : ""}`} />
@@ -58,10 +53,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="grid grid-cols-2 gap-3 pt-4">
-            <a href="tel:+19493786176" className="button-light text-center text-sm">Call Us</a>
-            <Link href="/case-upload" className="rounded-full bg-white px-6 py-[0.9rem] text-center text-sm font-bold text-[#1E3A5F]">Upload a Case</Link>
-          </div>
         </div>
       </div>
     </header>

@@ -25,7 +25,8 @@ export default function Home() {
               alt="Zirconia Restoration Overview — View Price List, Send a Case, Learn More"
               width={1440}
               height={800}
-              className="w-full h-auto rounded-2xl shadow-lg"
+              style={{ width: "100%", height: "auto" }}
+              className="rounded-2xl shadow-lg"
               priority
             />
 
