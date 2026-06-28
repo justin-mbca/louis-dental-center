@@ -1,7 +1,49 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { FormEvent, useState } from "react";
+
+const initialForm = {
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+};
+
+type SubmissionStatus = "idle" | "submitting" | "success" | "error";
 
 export default function ContactPage() {
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState<SubmissionStatus>("idle");
+
+  const updateField = (field: keyof typeof initialForm, value: string) => {
+    setForm((current) => ({ ...current, [field]: value }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Message sending failed");
+      }
+
+      setForm(initialForm);
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <main>
       {/* ─── HERO ─── */}
@@ -61,28 +103,75 @@ export default function ContactPage() {
           </div>
 
           {/* ─── FORM ─── */}
-          <form className="premium-card rounded-3xl p-7">
+          <form className="premium-card rounded-3xl p-7" onSubmit={handleSubmit}>
             <h2 className="text-2xl font-bold text-[#1E3A5F]">Send us a message</h2>
             <p className="mt-2 text-sm leading-6 text-slate-600">
               Fill out the form and our team will get back to you.
             </p>
 
             <div className="mt-7 grid gap-5 md:grid-cols-2">
-              <input className="field" placeholder="Name" required />
-              <input className="field" type="email" placeholder="Email" required />
-              <input className="field" placeholder="Phone" />
-              <select className="field" defaultValue="">
-                <option value="" disabled>Subject</option>
-                <option>General inquiry</option>
-                <option>Case submission</option>
-                <option>Pricing question</option>
-                <option>Partnership inquiry</option>
-                <option>Technical support</option>
+              <input
+                className="field"
+                placeholder="Name"
+                required
+                value={form.name}
+                onChange={(e) => updateField("name", e.target.value)}
+              />
+              <input
+                className="field"
+                type="email"
+                placeholder="Email"
+                required
+                value={form.email}
+                onChange={(e) => updateField("email", e.target.value)}
+              />
+              <input
+                className="field"
+                placeholder="Phone"
+                value={form.phone}
+                onChange={(e) => updateField("phone", e.target.value)}
+              />
+              <select
+                className="field"
+                value={form.subject}
+                onChange={(e) => updateField("subject", e.target.value)}
+              >
+                <option value="">Subject</option>
+                <option value="General inquiry">General inquiry</option>
+                <option value="Case submission">Case submission</option>
+                <option value="Pricing question">Pricing question</option>
+                <option value="Partnership inquiry">Partnership inquiry</option>
+                <option value="Technical support">Technical support</option>
               </select>
             </div>
-            <textarea className="field mt-5 min-h-40" placeholder="Tell us about your case, service need, or question." />
-            <button type="button" className="button-primary mt-6">Send Message</button>
-            <p className="mt-4 text-sm text-slate-500">Frontend form only. Connect to email or CRM before production use.</p>
+            <textarea
+              className="field mt-5 min-h-40"
+              placeholder="Tell us about your case, service need, or question."
+              required
+              value={form.message}
+              onChange={(e) => updateField("message", e.target.value)}
+            />
+            <button
+              type="submit"
+              className="button-primary mt-6 disabled:cursor-not-allowed disabled:opacity-60"
+              disabled={status === "submitting"}
+            >
+              {status === "submitting" ? "Sending..." : "Send Message"}
+            </button>
+
+            <div aria-live="polite">
+              {status === "success" && (
+                <div className="mt-6 rounded-2xl bg-emerald-50 p-5 text-emerald-900">
+                  <p className="font-bold">Message Sent Successfully</p>
+                  <p className="mt-1">Thank you. Louis Dental Center has received your message.</p>
+                </div>
+              )}
+              {status === "error" && (
+                <p className="mt-6 rounded-2xl bg-red-50 p-5 font-semibold text-red-800">
+                  Message failed to send. Please try again later.
+                </p>
+              )}
+            </div>
           </form>
         </div>
       </section>
@@ -91,17 +180,17 @@ export default function ContactPage() {
       <section className="bg-[#EAF4FF] px-5 py-20 text-center sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[1440px]">
           <h2 className="display-font text-4xl font-bold text-[#1E3A5F] md:text-5xl">
-            Ready to submit a case?
+            Ready to work together?
           </h2>
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-700">
-            Upload your case details directly and our team will begin processing.
+            Contact us to discuss your laboratory needs, request pricing, schedule a consultation, or learn about our digital workflow.
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <Link href="/case-upload" className="button-primary">
-              Upload a Case
-            </Link>
-            <Link href="/services/pricing" className="button-secondary">
+            <Link href="/services/pricing" className="button-primary">
               View Pricing
+            </Link>
+            <Link href="/services" className="button-secondary">
+              Explore Services
             </Link>
           </div>
         </div>

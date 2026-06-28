@@ -9,8 +9,7 @@ const quickLinks = [
 ];
 
 const portalLinks = [
-  ["Upload a Case", "/case-upload"],
-  ["Case Tracking", "/case-tracking"],
+  ["Pricing", "/services/pricing"],
   ["Contact", "/contact"],
 ];
 

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 const links = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/services/pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -46,7 +47,7 @@ export default function Navbar() {
         </button>
       </nav>
 
-      <div className={`border-t border-white/10 bg-[#1E3A5F] px-5 py-5 shadow-xl xl:hidden ${open ? "block" : "hidden"}`}>
+      <div className={`border-t border-white/10 bg-[#1E3A5F] px-5 py-5 shadow-xl sm:hidden ${open ? "block" : "hidden"}`}>
         <div className="grid gap-2">
           {links.map((link) => (
             <Link key={link.label} href={link.href} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-100 hover:bg-white/10 hover:text-white">

@@ -174,8 +174,8 @@ export default function PricingPage() {
             <Link href="/contact" className="button-primary">
               Contact Us
             </Link>
-            <Link href="/case-upload" className="button-secondary">
-              Upload a Case
+            <Link href="/services" className="button-secondary">
+              Explore Services
             </Link>
           </div>
         </div>
