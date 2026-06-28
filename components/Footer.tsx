@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const quickLinks = [
   ["About", "/about"],
-  ["Services", "/services"],
+  ["Special Offers", "/services"],
   ["Pricing", "/services/pricing"],
   ["FAQs", "/faq"],
 ];

@@ -107,7 +107,7 @@ export default function AboutPage() {
                   Become a Partner
                 </Link>
                 <Link href="/services" className="button-secondary">
-                  View Services
+                  View Special Offers
                 </Link>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function AboutPage() {
                 Become a Partner
               </Link>
               <Link href="/services" className="rounded-full border-2 border-white/50 px-8 py-4 text-sm font-bold text-white hover:bg-white/10">
-                Explore Services
+                View Special Offers
               </Link>
             </div>
           </div>

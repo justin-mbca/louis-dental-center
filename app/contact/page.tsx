@@ -190,7 +190,7 @@ export default function ContactPage() {
               View Pricing
             </Link>
             <Link href="/services" className="button-secondary">
-              Explore Services
+              View Special Offers
             </Link>
           </div>
         </div>

@@ -73,7 +73,7 @@ export default function Home() {
                 aria-label="Contact Us"
               />
               <a
-                href="/about"
+                href="/services"
                 className="absolute block rounded-lg transition-colors duration-200 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-[#D9BC7B]"
                 style={{ left: "66%", top: "72%", width: "20%", height: "10%" }}
                 aria-label="Learn More"
@@ -96,7 +96,7 @@ export default function Home() {
               Contact Us
             </Link>
             <Link
-              href="/about"
+              href="/services"
               className="rounded-full bg-[#1E3A5F] px-4 py-3 text-center text-sm font-bold text-white hover:bg-[#294d78] transition-colors"
             >
               Learn More

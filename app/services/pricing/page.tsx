@@ -175,7 +175,7 @@ export default function PricingPage() {
               Contact Us
             </Link>
             <Link href="/services" className="button-secondary">
-              Explore Services
+              View Special Offers
             </Link>
           </div>
         </div>

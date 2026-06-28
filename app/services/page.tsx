@@ -73,12 +73,12 @@ export default function ServicesPage() {
       {/* ─── HERO ─── */}
       <section className="bg-[#06182b] px-5 py-20 text-white sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[1440px]">
-          <p className="eyebrow text-[#d9bc7b]">Services</p>
+          <p className="eyebrow text-[#d9bc7b]">Special Offers</p>
           <h1 className="display-font mt-4 max-w-4xl text-5xl font-bold md:text-6xl">
-            Our Core Solutions
+            Special Offers
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            Flexible solutions for every dental practice, from affordable digital workflows to complex implant restorations.
+            Discover our featured products, exclusive pricing, and special programs designed to help dental practices reduce costs while delivering exceptional patient care.
           </p>
         </div>
       </section>
